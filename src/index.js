@@ -10,9 +10,8 @@ import {routerMiddleware,  ConnectedRouter } from 'connected-react-router'
 import {composeWithDevTools} from "redux-devtools-extension";
 import {Provider} from "react-redux";
 
-
-import App from './App';
 import createRootReducer from "./store/reducers/rootreducer";
+import routes from "./routes";
 
 
 export const history = createBrowserHistory();
@@ -26,7 +25,7 @@ const store = createStore(
 ReactDOM.render(
     <Provider store={store}>
         <ConnectedRouter history={history}>
-            <App/>
+            {routes}
         </ConnectedRouter>
     </Provider>
     ,

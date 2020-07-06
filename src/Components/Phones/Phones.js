@@ -5,6 +5,7 @@ import {Link} from "react-router-dom";
 
 import {fetchPhones, loadMorePhones} from "../../store/actions/phones";
 import {getPhones} from "../../selectors/Selectors";
+import App from "../../App";
 
 
 
@@ -52,7 +53,7 @@ class Phones extends React.Component {
     render() {
         const {phones, loadMorePhones} = this.props
         return (
-            <div>
+            <App>
                 <div>
                     {phones.map((phone, index) => this.renderPhone(phone, index))}
                 </div>
@@ -66,7 +67,7 @@ class Phones extends React.Component {
                         </button>
                     </div>
                 </div>
-            </div>
+            </App>
         )
     }
 }
