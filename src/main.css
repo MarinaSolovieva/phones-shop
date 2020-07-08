@@ -220,6 +220,11 @@ code {
 }
 .well{
     border-radius: 0 0 4px 4px;
+    background: #e5e5e5;
+    text-align: center;
+    padding-bottom: 10px;
+    padding-top: 10px;
+
 }
 .open>.dropdown-menu{
     min-width: 100%;
